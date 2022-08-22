@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Service Music | The best</title>
+
+      <!--Style document-->
+      <link rel="stylesheet" href="style.css">
+
+      <!--Font documents-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+
+      <!--JV TAG-->
+      <script src="logic.js" defer></script>
+
+</head>
+<body>
+      <main>
+            <!--main imagen-->
+            <section class="contenedor-imagen">
+                  <img src="imagenes/dance.svg" alt="A person dancing">
+            </section>
+
+            <!--Information and payment metho-->
+            <section class="info">
+                  <h1>Order Summary</h1>
+                  <p>
+                        You can now listen to millions of songs, 
+                        audiobooks, and podcasts on any device 
+                        anywhere you like!
+                  </p>
+
+                  <!--Annual plan-->
+                  <div class="plan-info" id="opcion1">
+                        <img src="imagenes/icon-music.svg" alt="">
+                        <ul>
+                              <li id="time">Week Plan</li>
+                              <li><span id="money">$9.99/Week</span></li>
+                        </ul>
+                        <p class="change" id="cam" onclick="showNext3()">Change</p>
+                  </div>
+                  <div class="plan-info" id="opcion">
+                        <img src="imagenes/icon-music.svg" alt="">
+                        <ul>
+                              <li>Month Plan</li>
+                              <li><span>$29.99/Month</span></li>
+                        </ul>
+                        <p class="change" onclick="showNext()">Change</p>
+                  </div>
+                  <div class="plan-info" id="opcion2">
+                        <img src="imagenes/icon-music.svg" alt="">
+                        <ul>
+                              <li>Anual Plan</li>
+                              <li><span>$59.99/year</span></li>
+                        </ul>
+                        <p class="change" onclick="showNext2()">Change</p>
+                  </div>
+
+                  <!--Buton to pay-->
+                  <input type="submit" class="pay-buton" value="Porcced to Payment">
+
+                  <!--Buton to cancel-->
+                  <input type="submit" class="cancel-buton" value="Cancel Order">
+            </section>
+      </main>
+</body>
+</html>

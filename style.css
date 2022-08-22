@@ -1,0 +1,260 @@
+*{
+
+      box-sizing: border-box;
+}
+html,body{
+
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+}
+
+/*Ajustes del body
+para lograr el fondo con ondulaciones se uso una imagen svg
+lo cual hay que integrararla aqui en eves de en el html 
+se le da posicion con el bg posicion, luego se le dice que 
+tome el tamaño del contenedor con bg size container y por ultimo 
+se le dice que no se repita con bg repeat no-repeat*/
+body{
+      background-color: hsl(224, 23%, 55%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      scroll-behavior: smooth;
+      background: url("imagenes/pattern-background-desktop.svg"), linear-gradient(hsl(225deg, 100%, 94%), hsl(225deg, 100%, 94%));
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: top;
+      max-width: 1440px;
+      margin: 0 auto;
+}
+
+/*Ajustes del contenedor principal*/
+main{
+
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      width: 29rem;
+      height: 43rem;
+      text-align: center;
+      overflow: hidden;
+      border-radius: 1rem;
+      box-shadow: -1px 1px 13px 2px rgba(43,43,43,0.41);
+      -webkit-box-shadow: -1px 1px 13px 2px rgba(43,43,43,0.41);
+      -moz-box-shadow: -1px 1px 13px 2px rgba(43,43,43,0.41);
+}
+
+/*contenedor de la imagen*/
+.contenedor-imagen{
+
+     padding: none;
+     width: 100%;
+}
+.contenedor-imagen img{
+
+      width: 100%;
+      height: 100%;
+}
+
+/*contenedor de la info*/
+.info{
+
+      padding: 1.5rem;
+      font-family: 'Red Hat Display', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+}
+
+.info h1{
+
+      font-size: 1.65rem;
+      color: rgb(31, 30, 30);
+      font-weight: 900;
+}
+.info p:first-of-type{
+
+      color: rgba(31, 30, 30, 0.745);
+      font-size: 1.15rem;
+      line-height: 1.7rem;
+}
+
+/*contenedor de plan*/
+.plan-info{
+
+      width: 82%;
+      height:5rem;
+      border-radius: 1rem;
+      background-color: rgba(245, 245, 245, 0.733);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+      flex-direction: row;
+}
+.plan-info img{
+
+      display: flex;
+      margin: 0 0 0 .87rem;
+      position: absolute;
+}
+.plan-info ul{
+
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin: 0 5.5rem 0 2.2rem;
+      position: relative;
+}
+.plan-info ul li{
+
+      color: rgb(31, 30, 30);
+      font-weight: 900;
+      line-height: 1.7rem;
+}
+.plan-info ul li span{
+
+      font-weight: 500;
+      color: rgba(43, 43, 43, 0.781);
+}
+.plan-info p:last-of-type{
+
+      font-size: .90rem;
+      color: rgb(120, 40, 248);
+      border-bottom: 1px solid rgb(120, 40, 248);
+      cursor: pointer;
+}
+.plan-info p:last-of-type:hover{
+
+      color: rgba(120, 40, 248, 0.576);
+      border-bottom: none;
+      transition: all 0.3s;
+}
+#opcion1, #opcion2{
+
+      display: none;
+}
+#opcion1 ul{
+
+      margin: 0 6.53rem 0 2.2rem;
+
+} 
+#opcion2 ul{
+
+      margin: 0 6.56rem 0 2.2rem;
+}
+
+/*java*/
+
+/*Input for pay*/
+.pay-buton{
+
+      margin: 2rem 0 1.65rem 0;
+      width: 82%;
+      height: 3rem;
+      border-radius: 1rem;
+      border: none;
+      background-color: hsl(245, 75%, 52%);
+      font-size: 1rem;
+      color: white;
+      font-family: 'Red Hat Display', sans-serif;
+      box-shadow: -1px 10px 11px 2px rgba(43,43,43,0.41);
+      -webkit-box-shadow: -1px 10px 11px 2px rgba(43,43,43,0.41);
+      -moz-box-shadow: -1px 10px 11px 2px rgba(43,43,43,0.41);
+      cursor: pointer;
+}
+.pay-buton:hover{
+
+      background-color: rgba(96, 10, 233, 0.593);
+}
+
+/*Cancel buton*/
+.cancel-buton{
+
+      border: none;
+      background-color: white;
+      font-family: 'Red Hat Display', sans-serif;
+      font-size: .93rem;
+      color: rgba(19, 19, 19, 0.639);
+      font-weight: 900;
+      cursor: pointer;
+}
+.cancel-buton:hover{
+
+      color: rgb(31, 30, 30);
+}
+
+/*mobil view*/
+
+@media screen and (max-width: 477px){
+
+      body{
+            background: url("./images/pattern-background-mobile.svg"),
+            linear-gradient(hsl(225, 100%, 94%), hsl(225, 100%, 94%));
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: top;
+      }
+      main{
+            width: 22rem;
+            height: 36rem;
+      }
+      .info{
+
+            padding: .7rem;
+      }
+      
+      .info h1{
+      
+            font-size: 1.4rem;
+            margin-bottom: 0;
+      }
+      .info p:first-of-type{
+
+            font-size: .90rem;
+
+      }
+
+      .plan-info img{
+            
+            margin: 0 10rem 0 .67rem;
+            
+      }
+      .plan-info ul{
+      
+            margin: 0 1.3rem 0 2.3rem;
+            font-size: .96rem;
+      }
+      #opcion1 ul{
+
+            margin: 0 1.3rem 0 2.2rem;
+      
+      } 
+      #opcion2 ul{
+      
+            margin: 0 1.3rem 0 2.2rem;
+      }
+
+}
+@media screen and (max-width: 348px){
+
+      .plan-info ul{
+      
+            margin: 0 .60rem 0 2.3rem;
+            font-size: .96rem;
+      }
+      #opcion1 ul{
+
+            margin: 0 1.3rem 0 2.2rem;
+      
+      } 
+      #opcion2 ul{
+      
+            margin: 0 1.3rem 0 2.2rem;
+      }
+
+}
